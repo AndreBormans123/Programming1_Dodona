@@ -1,14 +1,15 @@
 # https://dodona.ugent.be/nl/courses/1286/series/14348/activities/1317066143
-
+def bier_op_muur(aantal, enkelvoud, meervoud):
+  for i in range(1, aantal):
+    print(meervoud.format(aantal))
+    aantal -= 1
+    if aantal == 1:
+      print(enkelvoud.format(aantal))
+      print(meervoud.format(aantal))
+      print(enkelvoud.format(0))
+      break
+    print(enkelvoud.format(aantal))
 
 getal = int(input("Geef een getal in: "))
 
-for i in range(1, getal):
-    print(f"{getal} flesjes met bier op de muur, {getal} flesjes met bier.")
-    getal -= 1
-    if getal == 1:
-        print("Open er een, drink hem meteen, 1 flesje met bier op de muur.")
-        print("1 flesje met bier op de muur, 1 flesje met bier.")
-        print("Open er een, drink hem meteen, 0 flesjes met bier op de muur.")
-        break
-    print(f"Open er een, drink hem meteen, {getal} flesjes met bier op de muur.")
+bier_op_muur(getal, "{} flesje met bier op de muur, {} flesje met bier.", "{} flesjes met bier op de muur, {} flesjes met bier.")

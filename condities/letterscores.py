@@ -1,15 +1,18 @@
 # https://dodona.ugent.be/nl/courses/1286/series/14347/activities/774332532
 
 
-cijfer = int(input("geef een cijfer: "))
+getal = int(input("Geet een getal in: "))
 
-if cijfer < 60:
+
+if getal < 60:
     print("F")
-elif cijfer < 70:
+elif getal < 70:
     print("D")
-elif cijfer < 80:
+elif getal < 80:
     print("C")
-elif cijfer < 90:
+elif getal < 90:
     print("B")
 else:
     print("A")
+
+    
