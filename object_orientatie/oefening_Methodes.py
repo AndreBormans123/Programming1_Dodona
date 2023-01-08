@@ -1,0 +1,19 @@
+from math import sqrt
+
+class Punt:
+    def __init__( self, x=0.0, y=0.0 ):
+        self.x = x
+        self.y = y
+    def __repr__( self ):
+        return "({}, {})".format( self.x, self.y )
+    def translatie( self, shift_x, shift_y ):
+        self.x += shift_x
+        self.y += shift_y
+    def spiegel(self):
+        self.x = -self.x
+        self.y = -self.y
+
+p = Punt( -2.5, 5.0 )
+print( p )
+p.spiegel()
+print(p)
